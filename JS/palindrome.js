@@ -1,14 +1,21 @@
 const button = document.querySelector("button");
 const answer = document.getElementById("answer");
 
-button.addEventListener("click", function checkOnEnter() {
+function Palindrome(e) {
   answer.display = "";
   answer.innerHTML = "loading..... Please wait";
   answer.style.color = "rgb(22, 22, 139)";
 
   const timeout = setTimeout(() => {
     const input = document.getElementById("input-text");
-    const reversed = input.value.split("").reverse("").join("");
+    const reversed = input.value
+      .split("")
+      .reverse("")
+      .join("")
+      .replace(/[\W]/g, "")
+      .toLowerCase("");
+
+    console.log(reversed);
 
     if (input.value === "") {
       answer.innerHTML = "Please enter a word or number";
@@ -23,7 +30,9 @@ button.addEventListener("click", function checkOnEnter() {
       input.value = "";
     }
   }, 900);
-});
+}
+
+button.addEventListener("click", Palindrome);
 
 document.getElementById("input-text").onkeydown = function (e) {
   if (e.keyCode == 13) {
