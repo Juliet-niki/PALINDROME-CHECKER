@@ -8,7 +8,12 @@ function Palindrome(e) {
 
   const timeout = setTimeout(() => {
     const input = document.getElementById("input-text");
-    const reversed = input.value.split("").reverse("").join("").replace();
+    const reversed = input.value
+      .split("")
+      .reverse("")
+      .join("")
+      .replace()
+      .toLowerCase();
 
     if (input.value === "") {
       answer.innerHTML = "Please enter a word or number";
