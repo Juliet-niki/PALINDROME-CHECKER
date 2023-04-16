@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(rgb(22, 22, 139), rgb(62, 62, 80));
+  background: linear-gradient(to bottom, rgb(22, 22, 139), rgb(62, 62, 80));
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   background-attachment: fixed;
@@ -62,6 +62,9 @@ input[placeholder] {
   font-size: 15px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+input:hover {
+  border: 1px solid #f5ab6191;
+}
 
 button {
   width: 150px;
@@ -72,9 +75,11 @@ button {
   box-shadow: 2px 2px 2px #000;
   background-color: rgb(73, 73, 197);
   cursor: pointer;
+  box-shadow: 3px 3px 4px rgba(93, 69, 35, 0.9);
 }
 button:hover {
   background-color: rgb(62, 62, 238);
+  border: 1px solid #f5ab6191;
 }
 
 #answer {
@@ -93,11 +98,6 @@ button:hover {
     min-height: 300px;
     margin: 38% 0% 0% 10%;
     padding: 15px 0px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
-    background: #fff;
-    color: rgb(22, 22, 139);
   }
   .word {
     text-align: center;

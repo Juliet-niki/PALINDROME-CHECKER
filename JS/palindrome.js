@@ -8,24 +8,17 @@ function Palindrome(e) {
 
   const timeout = setTimeout(() => {
     const input = document.getElementById("input-text");
-    const reversed = input.value
-      .split("")
-      .reverse("")
-      .join("")
-      .replace(/[\W]/g, "")
-      .toLowerCase("");
-
-    console.log(reversed);
+    const reversed = input.value.split("").reverse("").join("").replace();
 
     if (input.value === "") {
       answer.innerHTML = "Please enter a word or number";
       answer.style.color = "#000";
-    } else if (reversed === input.value) {
-      answer.innerHTML = "Yes, it's a Palindrome";
+    } else if (reversed === input.value.toLowerCase()) {
+      answer.innerHTML = input.value + " is a Palindrome";
       answer.style.color = "#66dd29";
       input.value = "";
     } else {
-      answer.innerHTML = "No, it's not a Palindrome";
+      answer.innerHTML === input.value + " is not a Palindrome";
       answer.style.color = "#ff2900";
       input.value = "";
     }
