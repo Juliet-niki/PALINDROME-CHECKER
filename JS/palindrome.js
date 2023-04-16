@@ -18,7 +18,7 @@ function Palindrome(e) {
       answer.style.color = "#66dd29";
       input.value = "";
     } else {
-      answer.innerHTML === input.value + " is not a Palindrome";
+      answer.innerHTML = input.value + " is not a Palindrome";
       answer.style.color = "#ff2900";
       input.value = "";
     }
